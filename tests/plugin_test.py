@@ -5,7 +5,7 @@ import tempfile
 import pytest
 SETTINGS_DIRECTORY = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../'))
 sys.path.insert(0, SETTINGS_DIRECTORY)
-from certbot_redis_plugin.plugin import Authenticator
+from certbot_redis.plugin import Authenticator
 import fakeredis
 import mock
 
