@@ -4,8 +4,6 @@ from os import path
 
 here = path.abspath(path.dirname(__file__))
 
-with open(path.join(here, 'readme.md'), encoding='utf-8') as f:
-    long_description = f.read()
 with open('requirements.txt') as fp:
     install_requires = fp.read()
 
@@ -13,7 +11,7 @@ setup(
     name='certbot-redis',  # Required
     version='0.1.0',  # Required
     description='Certbot plugin for Redis',
-    url='https://github.com/deathowl/certbot-redis',  # Optional
+    url='https://github.com/deathowl/certbot-redis-plugin',  # Optional
 
     author='Balint Csergo',  # Optional
 
