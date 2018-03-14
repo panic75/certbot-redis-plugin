@@ -9,7 +9,7 @@ with open('requirements.txt') as fp:
 
 setup(
     name='certbot-redis',  # Required
-    version='0.1.1',  # Required
+    version='0.1.2',  # Required
     description='Certbot plugin for Redis',
     url='https://github.com/deathowl/certbot-redis-plugin',  # Optional
 
@@ -31,6 +31,7 @@ setup(
     packages=find_packages(),  # Required
 
     install_requires=install_requires,
+    include_package_data=True,
     entry_points={
         'letsencrypt.plugins': [
             'redis = certbot_redis.plugin:Authenticator',
