@@ -4,12 +4,11 @@ from os import path
 
 here = path.abspath(path.dirname(__file__))
 
-with open('requirements.txt') as fp:
-    install_requires = fp.read()
+
 
 setup(
     name='certbot-redis',  # Required
-    version='0.1.2',  # Required
+    version='0.1.3',  # Required
     description='Certbot plugin for Redis',
     url='https://github.com/deathowl/certbot-redis-plugin',  # Optional
 
@@ -30,7 +29,17 @@ setup(
 
     packages=find_packages(),  # Required
 
-    install_requires=install_requires,
+    install_requires=[
+        'acme==0.22.0',
+        'certbot>=0.22.0',
+        'PyOpenSSL',
+        'setuptools',
+        'zope.component==4.2.2',
+        'zope.event==4.1.0',
+        'zope.interface==4.1.3',
+        'hiredis',
+        'redis',
+    ],
     include_package_data=True,
     entry_points={
         'letsencrypt.plugins': [
