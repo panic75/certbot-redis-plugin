@@ -8,7 +8,7 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name='certbot-redis',  # Required
-    version='0.1.3',  # Required
+    version='0.1.4',  # Required
     description='Certbot plugin for Redis',
     url='https://github.com/deathowl/certbot-redis-plugin',  # Optional
 
@@ -34,7 +34,7 @@ setup(
         'certbot>=0.22.0',
         'PyOpenSSL',
         'setuptools',
-        'zope.component==4.2.2',
+        'zope.component==4.4.1',
         'zope.event==4.1.0',
         'zope.interface==4.1.3',
         'hiredis',
