@@ -36,7 +36,7 @@ setup(
         'setuptools',
         'zope.component==4.4.1',
         'zope.event==4.1.0',
-        'zope.interface==4.1.3',
+        'zope.interface==4.4.3',
         'hiredis',
         'redis',
     ],
