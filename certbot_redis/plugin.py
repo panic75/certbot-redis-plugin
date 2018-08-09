@@ -11,10 +11,9 @@ from .redisurlparser import RedisUrlParser
 
 logger = logging.getLogger(__name__)
 
-
+@zope.interface.implementer(interfaces.IAuthenticator)
+@zope.interface.provider(interfaces.IPluginFactory)
 class Authenticator(common.Plugin):
-    zope.interface.implements(interfaces.IAuthenticator)
-    zope.interface.classProvides(interfaces.IPluginFactory)
 
     description = "Redis Authenticator"
     @classmethod
